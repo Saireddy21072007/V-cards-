@@ -103,3 +103,7 @@ for filename in files:
         print(f"   [FAILED] Failed: {filename} - {e}")
 
 # 3. SAVE
+with open(OUTPUT_FILE, "w", encoding='utf-8') as f:
+    json.dump(results, f, indent=4)
+print(f"DONE! Data saved to {OUTPUT_FILE}")
+print(f"TOTAL INFERENCE TIME FOR 3 CARDS: {total_inference_time:.2f} seconds")
